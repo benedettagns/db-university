@@ -1,7 +1,7 @@
 -- Selezionare tutti gli studenti nati nel 1990 (160)
 SELECT * 
 FROM `students`
-WHERE `date_of_birth` = '1990-01-01';
+WHERE YEAR (`date_of_birth`) = '1990';
 
 -- Selezionare tutti i corsi che valgono più di 10 crediti (479)
 SELECT * 
@@ -12,6 +12,7 @@ WHERE `cfu` > '10';
 SELECT * 
 FROM `students` 
 WHERE `date_of_birth` <= '1992-01-01';
+-- WHERE TIMESTAMPDIFF (YEAR, `date_of_birth`, CURDATE()) > 30;
 
 --Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea (286)
 SELECT * 
