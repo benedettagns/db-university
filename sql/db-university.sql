@@ -67,3 +67,41 @@ GROUP BY `exam_id`;
 SELECT `departement_id`, COUNT (*)
 FROM `degrees`
 GROUP BY `department_id`;
+
+
+
+
+
+
+
+
+/* JOIN*/
+
+--Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia
+SELECT `degrees`.`name`, `students`.`name`, `students`.`surname`
+FROM `degrees`
+JOIN `students`
+	ON `students`.`degree_id` = `degrees`.`id`
+WHERE `degrees`.`name` = "corso di laurea in economia";
+
+--Selezionare tutti i Corsi di Laurea del Dipartimento di Neuroscienze
+SELECT `degrees`.`name` 
+FROM `departments` 
+JOIN `degrees` 
+    ON `departments`.`id` = `degrees`.`department_id` 
+WHERE `departments`.`name` = "Dipartimento di neuroscienze";
+
+--Selezionare tutti i corsi in cui insegna Fulvio Amato (id=44)
+SELECT
+
+--Selezionare tutti gli studenti con i dati relativi al corso di laurea a cui sono iscritti e relativo dipartimento, in ordine alfabetico per cognome e nome
+SELECT
+
+--Selezionare tutti i corsi di laurea con i relativi corsi e insegnanti
+SELECT
+
+--Selezionare tutti i docenti che insegnano nel Dipartimento di Matematica (54)
+SELECT
+
+--BONUS: Selezionare per ogni studente quanti tentativi d’esame ha sostenuto per superare ciascuno dei suoi esami
+SELECT
